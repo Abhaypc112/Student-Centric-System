@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <style type="text/css">
+    .bs-example {
+      margin: 0px;
+
+    }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-family: sans-serif;
+
+    }
+
+        /*---------------------------------------
+           Social section
+        -----------------------------------------*/
+        footer {
+          padding: 0px 0px 0px 0px;
+          background-color: black;
+          margin: 0px;
+        }
+
+
+        #ftr {
+
+          padding: 20px;
+        }
+
+        .fa {
+
+          font-size: 23px;
+          width: 60px;
+          text-align: center;
+          text-decoration: none;
+          margin: 5px 2px;
+          border-radius: 50%;
+        }
+
+        .fa:hover {
+          opacity: 0.5;
+          text-decoration: none;
+        }
+
+        .fa-facebook {
+          background: #3B5998;
+          color: white;
+          margin-top: 30px;
+        }
+
+        .fa-whatsapp {
+          background: #25d366;
+          color: white;
+        }
+
+        .fa-twitter {
+          background: #55ACEE;
+          color: white;
+        }
+
+        .fa-instagram {
+          background: #125688;
+          color: white;
+        }
+
+        p {
+          text-align: center;
+
+        }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background:#337AB7;">
+      <a href="/" class="navbar-brand">SAFI COLLEGE</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a href="/college/admin_view_staff" class="nav-item nav-link">Staff</a>
+          <a href="/prin-appointment" class="nav-item nav-link">Student</a>
+          <a href="/prin-appointment" class="nav-item nav-link">Request</a>
+        </div>
+
+        <form action="/logout" method="post">
+          {% csrf_token %}
+          <div class="navbar-nav navbar-right">
+            <button type="submit" class="nav-item nav-link btn-link">LOGOUT</button>
+          </div>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+
+  <!-- content start-->
+  {% block content %}
+
+  {% endblock content %}
+  <!-- content end-->
+<br><br><br><br><br><br><br><br>
+</body>
+</html>

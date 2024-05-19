@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .bs-example {
+      margin: 0px;
+
+    }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-family: sans-serif;
+
+    }
+    .navbar-link{
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      display: block;
+      padding: 0.5rem 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top shadow-sm" style="background:white;">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'images/safi.PNG' %}"
+            width="30" height="30" class="d-inline-block align-top" alt="">
+        <b class="text-success">SAFI</b>
+    </a>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+
+          <a href="/adminclick" style="text-decoration: none;" class="navbar-link text-secondary">Hod</a>
+          <a href="/staffclick" style="text-decoration: none;" class="navbar-link text-secondary">Staff</a>
+          <a href="/studentlogin" style="text-decoration: none;" class="navbar-link text-secondary">Student</a>
+          <a href="{% url 'head_login' %}" style="text-decoration: none;" class="navbar-link text-secondary">Principal</a>
+
+
+        </div>
+
+        <div class="navbar-nav">
+          <a href="/aboutus" style="text-decoration: none;" class="navbar-link text-secondary">About Us</a>
+          <a href="/contactus" style="text-decoration: none;" class="navbar-link text-secondary">Contact Us</a>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+
+
+</body>
+
+</html>
