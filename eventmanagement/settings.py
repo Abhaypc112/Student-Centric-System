@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
         'event',
        'widget_tweaks',
-       'eventCalendar',
 ]
 
 MIDDLEWARE = [

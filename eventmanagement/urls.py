@@ -9,7 +9,6 @@ from event.views import CustomLoginView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home_view,name=''),
-    path('',include('eventCalendar.urls')),
 
     path('aboutus', views.aboutus_view),
     path('contactus', views.contactus_view),
